@@ -4,15 +4,26 @@
 
 并且确保安装最新的 cuda12.6 和 cudnn 9.4 ，以获得更快的推理速度
 
+先安装pynini
+```
+conda install -y -c conda-forge pynini==2.1.5
+```
+安装macha-tts
+pip3 install matcha-tts
+
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+
 ```
 pip3 install -r requirements.txt
 ```
+国内
+pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
+
 
 ```
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-```
 
-本地设备是 4060-laptop，飞一样的感觉。
+python3 webui.py --port 5000 --model_dir ./pretrained_models/CosyVoice-300M-SFT
 
 # 启动接口服务
 

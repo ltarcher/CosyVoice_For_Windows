@@ -148,6 +148,6 @@ def fade_in_out(fade_in_mel, fade_out_mel, window):
 
 def set_all_random_seed(seed):
     random.seed(seed)
-    np.random.seed(seed)
+    np.random.seed(int(seed))
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
